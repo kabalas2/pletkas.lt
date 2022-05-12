@@ -10,7 +10,9 @@
                     <div class="card-body">
                         @foreach($relationships as $record)
                             {{ $record->article->title }}
+                        <a href="{{route('article.show',$record->article->slug)}}">
                             <img src="{{ $record->article->image }}">
+                        </a>
                         @endforeach
                         {{$relationships->links()}}
                     </div>

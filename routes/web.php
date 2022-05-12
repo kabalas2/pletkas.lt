@@ -24,3 +24,6 @@ Route::resource('/category','App\Http\Controllers\CategoryController');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search',[App\Http\Controllers\SearchController::class, 'search'])->name('search');
+
+
+Route::post('/comment',[App\Http\Controllers\CommentsController::class, 'post'])->name('comment.post');
